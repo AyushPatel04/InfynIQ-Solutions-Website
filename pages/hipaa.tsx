@@ -20,7 +20,7 @@ export default function HIPAA() {
 
         <h2 className="text-2xl font-semibold text-blue-400 mb-2">What This Means for You</h2>
         <p className="text-gray-300 mb-4">
-          Whether you're using our AI chatbots, web platforms, or custom solutions, you can trust that any data you share with us is treated with strict confidentiality and legal compliance. We do not sell or share health data, and we are transparent in how it&apos;s used.
+          Whether you're using our AI chatbots, web platforms, or custom solutions, you can trust that any data you share with us is treated with strict confidentiality and legal compliance. We do not sell or share health data, and we are transparent in how it's used.
         </p>
 
         <p className="text-gray-300">
