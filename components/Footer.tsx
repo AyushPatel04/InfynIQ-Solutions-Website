@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-[#222] text-white py-10 px-6 text-sm">
@@ -22,44 +24,47 @@ export default function Footer() {
         <div>
           <h3 className="text-blue-400 font-semibold mb-2">Industries</h3>
           <ul className="space-y-1">
-            <li><a href="/services" className="text-white hover:text-blue-400">Dental</a></li>
+            <li>
+              <Link href="/services" className="text-white hover:text-blue-400">Dental</Link>
+            </li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-blue-400 font-semibold mb-2">Products</h3>
           <ul className="space-y-1">
-            <li><a href="/services" className="text-white hover:text-blue-400">AI Chatbots</a></li>
-            <li><a href="/services" className="text-white hover:text-blue-400">Web Design</a></li>
-            <li><a href="/services" className="text-white hover:text-blue-400">Custom Solutions</a></li>
+            <li><Link href="/services" className="text-white hover:text-blue-400">AI Chatbots</Link></li>
+            <li><Link href="/services" className="text-white hover:text-blue-400">Web Design</Link></li>
+            <li><Link href="/services" className="text-white hover:text-blue-400">Custom Solutions</Link></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-blue-400 font-semibold mb-2">Company</h3>
           <ul className="space-y-1">
-            <li><a href="/about" className="text-white hover:text-blue-400">About</a></li>
-            <li><a href="/about" className="text-white hover:text-blue-400">Team</a></li>
-            <li><a href="/about" className="text-white hover:text-blue-400">Careers</a></li>
-            <li><a href="/about" className="text-white hover:text-blue-400">Blog</a></li>
+            <li><Link href="/about" className="text-white hover:text-blue-400">About</Link></li>
+            <li><Link href="/about" className="text-white hover:text-blue-400">Team</Link></li>
+            <li><Link href="/about" className="text-white hover:text-blue-400">Careers</Link></li>
+            <li><Link href="/about" className="text-white hover:text-blue-400">Blog</Link></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-blue-400 font-semibold mb-2">Support</h3>
           <ul className="space-y-1">
-            <li><a href="/contact" className="text-white hover:text-blue-400">Contact</a></li>
-            <li><a href="/contact" className="text-white hover:text-blue-400">FAQ</a></li>
-            <li><a href="/terms" className="text-white hover:text-blue-400">Terms of Use</a></li>
-            <li><a href="/privacy" className="text-white hover:text-blue-400">Privacy Policy</a></li>
+            <li><Link href="/contact" className="text-white hover:text-blue-400">Contact</Link></li>
+            <li><Link href="/contact" className="text-white hover:text-blue-400">FAQ</Link></li>
+            <li><Link href="/terms" className="text-white hover:text-blue-400">Terms of Use</Link></li>
+            <li><Link href="/privacy" className="text-white hover:text-blue-400">Privacy Policy</Link></li>
           </ul>
         </div>
       </div>
 
       <div className="text-center text-gray-400 mt-8 border-t border-gray-700 pt-4">
-        © 2025 InfynIQ Solutions. All Rights Reserved. | <a href="/hipaa" className="text-white hover:text-blue-400 underline">HIPAA Compliant</a> |{' '}
-        <a href="/terms" className="text-white hover:text-blue-400 underline">Terms</a> |{' '}
-        <a href="/privacy" className="text-white hover:text-blue-400 underline">Privacy</a>
+        © 2025 InfynIQ Solutions. All Rights Reserved. |{' '}
+        <Link href="/hipaa" className="text-white hover:text-blue-400 underline">HIPAA Compliant</Link> |{' '}
+        <Link href="/terms" className="text-white hover:text-blue-400 underline">Terms</Link> |{' '}
+        <Link href="/privacy" className="text-white hover:text-blue-400 underline">Privacy</Link>
       </div>
     </footer>
   );
