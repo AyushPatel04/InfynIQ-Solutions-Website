@@ -5,19 +5,41 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="text-white bg-black py-20 text-center px-4">
-        <h1 className="text-5xl font-bold mb-4">Empowering Dental Practices with AI</h1>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          InfynIQ Solutions builds custom AI chatbots and modern websites to streamline operations and boost patient engagement.
-        </p>
-        <div className="flex justify-center gap-4">
-          <Link href="/services">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded">Explore Services</button>
-          </Link>
-          <Link href="/contact">
-            <button className="bg-gray-100 hover:bg-gray-200 text-black px-6 py-3 rounded">Contact Us</button>
-          </Link>
+      {/* Hero Section with Animated Background */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden text-center px-4">
+        {/* Background GIF */}
+        <div className="absolute inset-0 -z-10">
+          <img
+            src="/Home.gif"
+            alt="Animated Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Optional overlay for readability */}
+          <div className="absolute inset-0 bg-black opacity-70" />
+        </div>
+
+        {/* Foreground Content */}
+        <div className="z-10">
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/logo.png"
+              alt="InfynIQ Solutions Logo"
+              width={200}
+              height={200}
+            />
+          </div>
+          <h1 className="text-5xl font-bold mb-4">Empowering Dental Practices with AI</h1>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            InfynIQ Solutions builds custom AI chatbots and modern websites to streamline operations and boost patient engagement.
+          </p>
+          <div className="flex justify-center gap-4">
+            <Link href="/services">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded">Explore Services</button>
+            </Link>
+            <Link href="/contact">
+              <button className="bg-gray-100 hover:bg-gray-200 text-black px-6 py-3 rounded">Contact Us</button>
+            </Link>
+          </div>
         </div>
       </section>
 
