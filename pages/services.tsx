@@ -1,72 +1,79 @@
 import Layout from '../components/Layout';
 
+const features = [
+  {
+    icon: '💬',
+    title: '24/7 Automated Patient Support',
+    desc: 'Answers FAQs about procedures, insurance, billing, and more — reducing front desk workload.',
+  },
+  {
+    icon: '📅',
+    title: 'Appointment Scheduling & Reminders',
+    desc: 'Book, reschedule, or cancel appointments via chat with auto-reminders to reduce no-shows.',
+  },
+  {
+    icon: '🪥',
+    title: 'Post-Procedure Care Instructions',
+    desc: 'Gives step-by-step aftercare based on procedure selected — reducing follow-up calls.',
+  },
+  {
+    icon: '📈',
+    title: 'Smart FAQs with Learning',
+    desc: 'Improves accuracy over time by learning from patient interactions.',
+  },
+  {
+    icon: '📸',
+    title: 'Image Upload',
+    desc: 'Patients can send photos (e.g., chipped tooth), helping prioritize urgent cases.',
+  },
+  {
+    icon: '🔐',
+    title: 'HIPAA-Compliant Design',
+    desc: 'Encrypted patient interactions ensure privacy law compliance.',
+  },
+  {
+    icon: '🛠️',
+    title: 'Easy Integration',
+    desc: 'Embeds easily in any dental site. Connects with patient management systems (PMS) via API.',
+  },
+  {
+    icon: '👨‍⚕️',
+    title: 'Human Handoff',
+    desc: 'Escalates complex chats to front desk/on-call staff for seamless support.',
+  },
+  {
+    icon: '📄',
+    title: 'Export & Transcripts',
+    desc: 'Provides chat transcripts to patients and optionally emails summaries to clinics.',
+  },
+];
+
 export default function ServicesPage() {
   return (
     <Layout>
-      <h1 className="text-3xl font-bold mb-6">Our Services</h1>
+      <section className="text-white bg-black px-6 py-12">
+        <h1 className="text-4xl font-bold mb-8 text-center">Our Services</h1>
 
-      <h2 className="text-2xl font-semibold mt-4 mb-2">🦷 Dental AI Chatbot – Feature Overview</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">🦷 Dental AI Chatbot</h2>
 
-      <ul className="space-y-4 text-lg list-none">
-        <li>
-          💬 <strong>1. 24/7 Automated Patient Support:</strong><br />
-          Instantly answers common questions about dental procedures, insurance, billing, office hours, and more.<br />
-          Reduces call volume and frees up front desk staff.
-        </li>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {features.map((f) => (
+            <div key={f.title} className="bg-gray-900 border border-gray-700 p-6 rounded-lg hover:border-blue-500 transition">
+              <div className="text-3xl mb-3">{f.icon}</div>
+              <h3 className="text-xl font-semibold mb-2">{f.title}</h3>
+              <p className="text-gray-300">{f.desc}</p>
+            </div>
+          ))}
+        </div>
 
-        <li>
-          📅 <strong>2. Appointment Scheduling & Reminders:</strong><br />
-          Patients can book, reschedule, or cancel appointments via chat.<br />
-          Sends automated reminders to reduce no-shows.
-        </li>
-
-        <li>
-          🪥 <strong>3. Post-Procedure Care Instructions:</strong><br />
-          Provides step-by-step aftercare based on selected procedures.<br />
-          Reduces follow-up calls and improves patient compliance.
-        </li>
-
-        <li>
-          📈 <strong>4. Smart FAQs with Learning Capabilities:</strong><br />
-          Continuously learns from patient interactions.<br />
-          Improves accuracy and response quality over time.
-        </li>
-
-        <li>
-          📸 <strong>5. Image Upload:</strong><br />
-          Patients can upload photos (e.g., of a chipped tooth or gum issue).<br />
-          Helps prioritize urgency before a visit.
-        </li>
-
-        <li>
-          🔐 <strong>6. HIPAA-Compliant Design:</strong><br />
-          All patient interactions are encrypted.<br />
-          Ensures compliance with healthcare privacy laws.
-        </li>
-
-        <li>
-          🛠️ <strong>7. Easy Integration:</strong><br />
-          Embeddable widget for dental websites.<br />
-          Integrates with patient management systems (PMS) via API.
-        </li>
-
-        <li>
-          👨‍⚕️ <strong>8. Human Handoff Option:</strong><br />
-          Escalates complex or emergency cases to front desk or on-call staff.<br />
-          Seamless transition from bot to human.
-        </li>
-
-        <li>
-          📄 <strong>9. Export & Transcript Option:</strong><br />
-          Patients receive a transcript of their conversation.<br />
-          Optionally email summaries to clinic inbox for documentation.
-        </li>
-      </ul>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-2">🎨 Website Redesign</h2>
-      <p className="text-lg">
-        We also specialize in redesigning dental office websites to be fast, responsive, mobile-friendly, and SEO-optimized — built with a modern tech stack and customized to your brand.
-      </p>
+        {/* Website redesign blurb */}
+        <div className="mt-16 text-center max-w-3xl mx-auto">
+          <h2 className="text-2xl font-semibold mb-3">🎨 Website Redesign</h2>
+          <p className="text-gray-300 text-lg">
+            We also offer full dental website makeovers — optimized for speed, SEO, mobile, and patient trust. Built with modern tech and tailored to your brand.
+          </p>
+        </div>
+      </section>
     </Layout>
   );
 }
