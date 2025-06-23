@@ -8,13 +8,28 @@ export default function Home() {
     <>
       <Head>
         <title>InfynIQ Solutions | AI Chatbots & Modern Websites for Dental Clinics</title>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="InfynIQ Solutions empowers dental practices with AI chatbots and sleek, modern websites to improve patient experience and streamline operations." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://infyniqsolutions.com/" />
+
+        {/* Open Graph */}
         <meta property="og:title" content="InfynIQ Solutions | AI Chatbots & Modern Websites for Dental Clinics" />
         <meta property="og:description" content="InfynIQ Solutions empowers dental practices with AI chatbots and sleek, modern websites to improve patient experience and streamline operations." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://infyniqsolutions.com/" />
+        <meta property="og:image" content="/logo.png" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="InfynIQ Solutions | AI Chatbots & Modern Websites for Dental Clinics" />
+        <meta name="twitter:description" content="InfynIQ Solutions empowers dental practices with AI chatbots and modern websites to streamline operations." />
+        <meta name="twitter:image" content="/logo.png" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <html lang="en" />
       </Head>
 
       <Layout>
